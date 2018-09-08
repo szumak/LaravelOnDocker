@@ -1,0 +1,28 @@
+.\" Laravel on Docker - LoD
+.\" Marcin Szumski
+.TH man 8 "08 Sep 2018" "1.0" "Laravel on Docker"
+.SH NAME
+LoD \- simply runs Laravel project on docker container
+.SH SYNOPSIS
+make [COMMAND]
+.SH DESCRIPTION
+This repository provides fast and easy way to run Laravel project using docker containers
+.SH OPTIONS
+.IP new
+creates new laravel project. See Makefile if you want to change Laravel version
+.IP start
+starts docker container
+.IP clean
+removes www folder
+.IP npm_install
+runs "npm install" command
+.IP npm_watch
+runs "npm run watch" command
+.IP composer_install
+runs "composer install" command
+.IP help
+this screen
+.SH BUGS
+No known bugs.
+.SH AUTHOR
+Marcin Szumski (szumski.szumak@gmail.com)

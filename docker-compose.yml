@@ -1,0 +1,23 @@
+version: "3.3"
+services:
+
+  web:
+    image: richarvey/nginx-php-fpm:1.5.3
+    volumes:
+      - type: bind
+        source: /etc/localtime
+        target: /etc/localtime
+      - type: bind
+        source: ./www
+        target: /data
+      - type: bind
+        source: ./config/nginx.config
+        target: /etc/nginx/sites-available/default.conf 
+    environment:
+      - WEBROOT=/var/www/html/src/public/
+    dns: 8.8.8.8
+    ports:
+      - target: 80
+        published: 8180
+        protocol: tcp
+        mode: host

@@ -1,0 +1,2 @@
+#!/bin/bash
+docker run -v "$PWD/www":/usr/src/app -w /usr/src/app node:latest npm $@
